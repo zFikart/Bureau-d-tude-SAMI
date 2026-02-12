@@ -1,0 +1,60 @@
+Partie Communication Server:
+
+1. Lancer WinSCP
+Rentrer l'ip du robot dans "Nom d'hôte"
+ex : 100.75.155.151
+puis rentrer le mot de passe : maker
+
+Dans robot_server.py : 
+Remplacer HOST = "localhost" par l'adresse ip du rebot qu'on a rentré dans wincp
+ex : HOST = "100.75.155.151"
+
+Dans WinSCP :
+Transferer le fichier dans le robot (a droite) robot_server.py
+
+3. Lancer puty
+Rentrer l'ip puis entrer
+ex : 100.75.155.151
+login : robot
+mdp : maker
+
+Dans WinSCP:
+Ecrire : sudo python3 nom_fichier.py
+ex :  sudo python3 robot_server.py
+
+Mot de passe a rentrer (car sude / droit admin) : maker
+
+Dans panel.py :
+On print seulement le message
+mais on veut faire bouger le robt
+
+msg.decode("UTF-8") pour decoder le message dansn
+
+
+CTRL-C pour sortir de Puty
+
+
+Lundi 13/05/24
+Allumer PC avec id sur la feuille
+Allumer les caméras avec mode d'emploi
+
+Modifier dans optitrack :
+- numPC, ex : PC3
+- srvAddr par .160 à la fin
+
+Logiciel a 3 boules sur le bureau : 
+Configurer le robot sur le logiciel en selectionnant les 5 boules pour identifier le robot
+
+Astuces : cliquer sur les caméras pour voir à quelle caméra elle correspond
+
+NE -> (0.13177113234996796, 0.052629221230745316, 2.932141065597534)
+NO -> (1.58859121799469, 0.06394529342651367, 2.8414299488067627)
+SE -> (0.11861231923103333, 0.05509529635310173, 0.13947132229804993)
+SO -> (2.954619884490967, 0.06956695765256882, 0.12987224757671356)
+
+from os.path import basename
+
+print("Filename :", basename(__file__))
+print(f"Date : {datetime.date.today().strftime('%A')[:2]} {datetime.date.today().strftime('%d.%m.20%y')}")
+ 
+
